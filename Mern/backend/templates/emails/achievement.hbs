@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏆 Achievement Unlocked!</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+    }
+    .container { 
+      max-width: 600px; 
+      margin: 0 auto; 
+      background: white; 
+      border-radius: 20px; 
+      overflow: hidden; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    }
+    .header { 
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+      padding: 40px 30px; 
+      text-align: center; 
+      color: white; 
+      position: relative;
+    }
+    .achievement-badge { 
+      font-size: 100px; 
+      margin-bottom: 20px; 
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .content { 
+      padding: 40px 30px; 
+      text-align: center; 
+    }
+    .achievement-title { 
+      font-size: 32px; 
+      font-weight: 700; 
+      color: #333; 
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .achievement-desc { 
+      font-size: 20px; 
+      color: #666; 
+      line-height: 1.6; 
+      margin-bottom: 30px; 
+    }
+    .congratulations {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin: 30px 0;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .cta-button { 
+      display: inline-block; 
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+      color: white; 
+      padding: 18px 35px; 
+      text-decoration: none; 
+      border-radius: 50px; 
+      font-weight: 600; 
+      font-size: 18px;
+      box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+      transition: transform 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+    }
+    .achievement-details {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 15px;
+      margin: 30px 0;
+      border-left: 5px solid #f093fb;
+    }
+    .achievement-date {
+      color: #888;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    .footer { 
+      background: #f8f9fa; 
+      padding: 30px; 
+      text-align: center; 
+      color: #666; 
+      font-size: 14px; 
+    }
+    .celebration-banner {
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+      height: 8px;
+      margin-bottom: 0;
+    }
+    .sparkles {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      animation: sparkle 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes sparkle {
+      0% { opacity: 0.4; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div style="padding: 40px 20px;">
+    <div class="container">
+      <div class="celebration-banner"></div>
+      <div class="header">
+        <div class="sparkles">✨</div>
+        <div class="achievement-badge">{{achievementIcon}}</div>
+        <h1>Achievement Unlocked!</h1>
+        <div class="sparkles" style="left: 20px; right: auto;">⭐</div>
+      </div>
+      <div class="content">
+        <h2 class="achievement-title">{{achievementTitle}}</h2>
+        <p class="achievement-desc">{{achievementDescription}}</p>
+        
+        <div class="congratulations">
+          <strong>🎉 Congratulations {{userName}}!</strong><br>
+          You've reached a new milestone in your language learning journey. Your dedication and hard work are truly paying off!
+        </div>
+
+        <div class="achievement-details">
+          <h3 style="margin-top: 0; color: #333;">🌟 Achievement Details</h3>
+          <p><strong>Title:</strong> {{achievementTitle}}</p>
+          <p><strong>Description:</strong> {{achievementDescription}}</p>
+          <p><strong>Unlocked on:</strong> {{achievementDate}}</p>
+          <p style="margin-bottom: 0;"><strong>Rarity:</strong> <span style="color: #f093fb; font-weight: 600;">Special Achievement</span></p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; margin: 30px 0;">
+          <h3 style="margin: 0 0 10px 0;">🚀 Keep the Momentum Going!</h3>
+          <p style="margin: 0; font-size: 16px;">You're on an amazing streak! Continue learning to unlock even more achievements and reach new heights in your language journey.</p>
+        </div>
+        
+        <a href="{{appUrl}}" class="cta-button">Continue Learning 🚀</a>
+      </div>
+      <div class="footer">
+        <p><strong>Keep up the amazing work!</strong></p>
+        <p>The {{appName}} Team is cheering you on! 🎊</p>
+        <p style="margin-top: 20px; font-size: 12px;">© {{year}} {{appName}}. All rights reserved.</p>
+        <p style="font-size: 12px;">Share your achievement with friends and inspire them to start learning too!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

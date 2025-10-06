@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to {{appName}}</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    }
+    .container { 
+      max-width: 600px; 
+      margin: 0 auto; 
+      background: white; 
+      border-radius: 20px; 
+      overflow: hidden; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    }
+    .header { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      padding: 40px 30px; 
+      text-align: center; 
+      color: white; 
+    }
+    .header h1 { 
+      margin: 0; 
+      font-size: 32px; 
+      font-weight: 700; 
+    }
+    .header p { 
+      margin: 10px 0 0; 
+      font-size: 18px; 
+      opacity: 0.9; 
+    }
+    .content { 
+      padding: 40px 30px; 
+    }
+    .welcome-icon { 
+      font-size: 64px; 
+      text-align: center; 
+      margin-bottom: 20px; 
+    }
+    .message { 
+      font-size: 18px; 
+      line-height: 1.6; 
+      color: #333; 
+      margin-bottom: 30px; 
+    }
+    .cta-button { 
+      display: inline-block; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      color: white; 
+      padding: 15px 30px; 
+      text-decoration: none; 
+      border-radius: 50px; 
+      font-weight: 600; 
+      font-size: 16px; 
+      margin: 20px 0; 
+    }
+    .features { 
+      background: #f8f9fa; 
+      padding: 30px; 
+      border-radius: 15px; 
+      margin: 30px 0; 
+    }
+    .feature { 
+      display: flex; 
+      align-items: center; 
+      margin: 15px 0; 
+    }
+    .feature-icon { 
+      font-size: 24px; 
+      margin-right: 15px; 
+    }
+    .footer { 
+      background: #f8f9fa; 
+      padding: 30px; 
+      text-align: center; 
+      color: #666; 
+      font-size: 14px; 
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .stat-label {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div style="padding: 40px 20px;">
+    <div class="container">
+      <div class="header">
+        <h1>🌍 Welcome to {{appName}}!</h1>
+        <p>Your language learning journey starts here</p>
+      </div>
+      <div class="content">
+        <div class="welcome-icon">🎉</div>
+        <div class="message">
+          <p>Hi <strong>{{userName}}</strong>,</p>
+          <p>Welcome to LinguaLearn! We're absolutely thrilled to have you join our vibrant community of language learners from around the globe.</p>
+          <p>Get ready to embark on an exciting adventure where you'll master new languages through interactive lessons, engaging games, and real-world conversations that make learning both fun and effective.</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <a href="{{appUrl}}" class="cta-button">🚀 Start Learning Now</a>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Languages Available</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Active Learners</div>
+          </div>
+        </div>
+        
+        <div class="features">
+          <h3 style="margin-top: 0; color: #333; text-align: center;">🎯 What awaits you in LinguaLearn:</h3>
+          <div class="feature">
+            <span class="feature-icon">📚</span>
+            <span><strong>Smart Flashcards:</strong> AI-powered vocabulary building with spaced repetition</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🎮</span>
+            <span><strong>Interactive Games:</strong> Word matching, memory games, and typing challenges</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🤖</span>
+            <span><strong>AI Translation:</strong> Instant translation and conversation practice</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📊</span>
+            <span><strong>Progress Tracking:</strong> Detailed analytics and achievement system</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🔥</span>
+            <span><strong>Streak System:</strong> Build consistent learning habits with daily goals</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🌟</span>
+            <span><strong>Achievements:</strong> Unlock badges and celebrate your milestones</span>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; margin: 30px 0;">
+          <h3 style="margin: 0 0 10px 0;">💡 Pro Tip</h3>
+          <p style="margin: 0; font-size: 16px;">Set aside just 15 minutes daily for consistent progress. Small steps lead to big achievements!</p>
+        </div>
+      </div>
+      <div class="footer">
+        <p><strong>Happy learning!</strong></p>
+        <p>The {{appName}} Team 💙</p>
+        <p style="margin-top: 20px; font-size: 12px;">© {{year}} {{appName}}. All rights reserved.</p>
+        <p style="font-size: 12px;">You're receiving this email because you signed up for {{appName}}.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
